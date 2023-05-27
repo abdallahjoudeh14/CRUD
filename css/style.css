@@ -1,0 +1,177 @@
+:root {
+	--white-25: #e5e5e5;
+	--white-50: #f5f5f5;
+	--white-100: #ffffff;
+	--white-opacity: #ffffffd4;
+	--black-25: #6d6d6d;
+	--black-50: #5b5b5b;
+	--black-100: #353535;
+	--primary: #1b7be2;
+	--primary-hover: #3087e4;
+	--primary-25: #86b7fe;
+	--primary-opacity: #0d6efd40;
+	--danger: #dc3545;
+	--danger-hover: #de4857;
+	--danger-50: #f8d7da;
+	--success: #00da24;
+	--success-hover: #55e993;
+	--success-50: #a4ffbe;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+h2 {
+	color: var(--black-50);
+}
+section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 2rem 4rem;
+	gap: 1rem;
+	margin-top: 4rem;
+}
+
+/* ========== button Design ========== */
+
+.button {
+	display: inline-block;
+	padding: 7px 10px;
+	text-decoration: none;
+	color: var(--white-50);
+	border-radius: 5px;
+	width: fit-content;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: outline 0.15s ease-in-out;
+}
+
+.btn-primary {
+	background-color: var(--primary);
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-hover);
+}
+
+.btn-danger {
+	background-color: var(--danger);
+}
+
+.btn-danger:hover {
+	background-color: var(--danger-hover);
+}
+
+fieldset.wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	padding: 1rem;
+	border-radius: 5px;
+	border: 1px solid var(--white-25);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-label {
+	color: var(--black-50);
+}
+
+.form-input {
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid var(--white-25);
+	outline: none;
+	padding: 0 5px;
+	font-size: 1rem;
+	transition: outline 0.15s ease-in-out;
+}
+
+:where(.form-input, .btn-primary):focus {
+	border-color: var(--primary-25);
+	outline: 4px solid var(--primary-opacity);
+}
+
+:where(.form-input-danger, .btn-danger):focus {
+	border-color: var(--danger);
+	outline: 4px solid var(--danger-50);
+}
+
+/* ========== Table Design ========== */
+
+.table-responsive {
+	overflow-x: auto;
+	border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar {
+	height: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+	background-color: var(--primary);
+	border-radius: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	min-width: 735px;
+	width: 100%;
+}
+
+table :where(th, td) {
+	text-align: start;
+	padding: 0 15px;
+}
+
+table :where(thead, tfoot) {
+	background-color: var(--primary);
+	color: #f5f5f5;
+}
+
+table tr {
+	height: 55px;
+}
+
+table tbody tr:nth-of-type(odd) {
+	background-color: #f0f0f0;
+}
+
+/* ========== Alert Design ========== */
+
+.alert {
+	padding: 1rem 0.5rem;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: var(--black-100);
+}
+
+.alert-danger {
+	background-color: var(--danger-50);
+	border-color: var(--danger);
+}
+
+.alert-success {
+	background-color: var(--success-50);
+	border-color: var(--success);
+}
