@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta content="charset=UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Add Data</title>
@@ -15,9 +17,9 @@
 
 		if (isset($_POST['submit'])) {
 			// Escape special characters in string for use in SQL statement	
-			$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-			$age = mysqli_real_escape_string($mysqli, $_POST['age']);
-			$email = mysqli_real_escape_string($mysqli, $_POST['email']);
+			$name = $_POST['name'];
+			$age = $_POST['age'];
+			$email = $_POST['email'];
 
 			// Check for empty fields
 			if (empty($name) || empty($age) || empty($email)) {

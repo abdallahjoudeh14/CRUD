@@ -32,7 +32,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	padding: 2rem 4rem;
+	padding: 2rem clamp(1rem, 6vw, 4rem);
 	gap: 1rem;
 	margin-top: 4rem;
 }
@@ -50,7 +50,7 @@ section {
 	outline: none;
 	font-size: 1rem;
 	cursor: pointer;
-	transition: outline 0.15s ease-in-out;
+	transition: box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary {
@@ -101,17 +101,17 @@ form {
 	outline: none;
 	padding: 0 5px;
 	font-size: 1rem;
-	transition: outline 0.15s ease-in-out;
+	transition: box-shadow 0.15s ease-in-out;
 }
 
 :where(.form-input, .btn-primary):focus {
 	border-color: var(--primary-25);
-	outline: 4px solid var(--primary-opacity);
+	box-shadow: 0 0 0 5px var(--primary-opacity);
 }
 
 :where(.form-input-danger, .btn-danger):focus {
 	border-color: var(--danger);
-	outline: 4px solid var(--danger-50);
+	box-shadow: 0 0 0 5px var(--danger-50);
 }
 
 /* ========== Table Design ========== */

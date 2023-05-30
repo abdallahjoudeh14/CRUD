@@ -15,10 +15,13 @@ $name = $resultData['name'];
 $age = $resultData['age'];
 $email = $resultData['email'];
 ?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
 	<meta content="charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css">
 	<title>Edit Data</title>
 </head>

@@ -5,11 +5,12 @@ require_once("dbConnection.php");
 // Fetch data in descending order (lastest entry first)
 $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 ?>
-
+<!DOCTYPE html>
 <html>
 
 <head>
 	<meta content="charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css">
 	<title>Homepage</title>
 </head>
@@ -34,12 +35,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 					// Fetch the next row of a result set as an associative array
 					while ($res = mysqli_fetch_assoc($result)) {
 						echo "<tr>
-							<td>{$res['name']}</td>
-							<td>{$res['email']}</td>
-							<td>{$res['age']}</td>
-							<td><a href=\"edit.php?id=$res[id]\" class='button btn-primary'>Edit</a>&nbsp;&nbsp;
-								<a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\" class='button btn-danger'>Delete</a></td>
-							</tr>";
+								<td>{$res['name']}</td>
+								<td>{$res['email']}</td>
+								<td>{$res['age']}</td>
+								<td><a href=\"edit.php?id=$res[id]\" class='button btn-primary'>Edit</a>&nbsp;&nbsp;
+									<a href=\"delete.php?id=$res[id]\" onClick=\"console.log($res[id])\" class='button btn-danger'>Delete</a></td>
+								</tr>";
 					}
 					?>
 				</tbody>
