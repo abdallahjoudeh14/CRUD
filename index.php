@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 								<td>{$res['email']}</td>
 								<td>{$res['age']}</td>
 								<td><a href=\"edit.php?id=$res[id]\" class='button btn-primary'>Edit</a>&nbsp;&nbsp;
-									<a href=\"delete.php?id=$res[id]\" onClick=\"console.log($res[id])\" class='button btn-danger'>Delete</a></td>
+									<a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure to delete user')\" class='button btn-danger'>Delete</a></td>
 								</tr>";
 					}
 					?>
